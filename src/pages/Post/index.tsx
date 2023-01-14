@@ -1,13 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { PostHeader } from './components/PostHeader';
-import { useContextSelector } from 'use-context-selector';
-import { IPost, PostContext } from '../../contexts/PostsContext';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { api } from '../../lib/axios';
+import { useContextSelector } from 'use-context-selector';
+import { PostContext } from '../../contexts/PostsContext';
 import { Content } from './components/Content';
-
-const username = import.meta.env.VITE_GITHUB_USERNAME
-const repoName = import.meta.env.VITE_GITHUB_REPONAME
+import { PostHeader } from './components/PostHeader';
 
 interface PostProps {
 
